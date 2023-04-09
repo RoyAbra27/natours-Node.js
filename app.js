@@ -9,6 +9,7 @@ import ExpressMongoSanitize from 'express-mongo-sanitize';
 import { fileURLToPath } from 'url';
 import path from 'path';
 import cookieParser from 'cookie-parser';
+import compression from 'compression';
 
 import { tourRouter } from './routes/tourRoutes.js';
 import { userRouter } from './routes/userRoutes.js';
@@ -74,7 +75,7 @@ app.use(
     ],
   })
 );
-
+app.use(compression());
 // ROUTES
 app.use('/', viewRouter);
 app.use('/api/v1/tours', tourRouter);

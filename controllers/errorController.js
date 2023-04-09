@@ -31,6 +31,7 @@ const sendErrorDev = (err, req, res) => {
       stack: err.stack,
     });
   }
+  console.log('ERROR', err);
   return res.status(err.statusCode).render('error', {
     title: 'Something went wrong!',
     msg: err.message,
@@ -39,7 +40,6 @@ const sendErrorDev = (err, req, res) => {
 
 const sendErrorProd = (err, req, res) => {
   // API ERRORS
-  // console.log(req.originalUrl);
   if (req.originalUrl.startsWith('/api')) {
     // Operational (known) error, send msg to client
     if (err.isOperational) {
@@ -49,7 +49,9 @@ const sendErrorProd = (err, req, res) => {
       });
       // Programming or unknown error, don't leak details - send generic msg
     }
-    res.status(500).json({
+    console.log('ERROR', err);
+
+    return res.status(500).json({
       status: 'error',
       message: 'Something went very wrong!',
     });

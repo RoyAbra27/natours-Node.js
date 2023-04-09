@@ -6,7 +6,7 @@ export const updateData = async (data, type) => {
   try {
     const res = await axios({
       method: 'PATCH',
-      url: `http://localhost:3000/api/v1/users/update-my-${type}`,
+      url: `/api/v1/users/update-my-${type}`,
       data,
     });
     if (res.data.status === 'success') {
