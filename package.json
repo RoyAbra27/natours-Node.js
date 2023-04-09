@@ -5,7 +5,7 @@
   "source": "./public/js/index.js",
   "main": "./public/js/bundle.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "start:prod": "SET NODE_ENV=production& nodemon server.js",
     "debug": "ndb server.js",
     "watch": "parcel watch",
