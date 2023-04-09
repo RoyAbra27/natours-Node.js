@@ -2,8 +2,8 @@
   "name": "natours",
   "version": "1.0.0",
   "description": "Learning node express and mongodb",
-  "source": "./public/js/index.js",
-  "main": "./public/js/dist/bundle.js",
+  "source": "./server.js",
+  "main": "./dist/main.js",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
