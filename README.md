@@ -1,7 +1,7 @@
 # Natours 
 
 Welcome to Natours, 
-This is a Node.js web application for a tour company. Its a RESTful API for managing tours, users, bookings, authenthication and payment.
+This is a Node.js web application for a tour company. Its a RESTful API for managing tours, users, bookings, authentication and payment.
 
 https://natours-travel.up.railway.app/
 
